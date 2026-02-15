@@ -1,0 +1,220 @@
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  /* Google Fonts imports */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+
+  /* Root and global styles */
+  :root {
+    --color-primary: 37 99 235; /* blue-600 */
+    --color-secondary: 59 130 246; /* blue-500 */
+    --color-muted: 107 114 128; /* gray-500 */
+  }
+
+  /* Body base styles */
+  body {
+    @apply bg-white dark:bg-black dark:text-white transition;
+    @apply font-sans  text-gray-900 dark:text-gray-100;
+    font-feature-settings: 'kern' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Heading styles */
+  h1 {
+    @apply text-5xl xl:text-7xl font-bold text-gray-900 dark:text-white mb-6;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    @apply text-4xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-5;
+    letter-spacing: -0.015em;
+  }
+
+  h3 {
+    @apply text-3xl xl:text-5xl font-semibold text-gray-900 dark:text-white mb-4;
+  }
+
+  h4 {
+    @apply text-2xl xl:text-4xl font-semibold text-gray-900 dark:text-white mb-3;
+  }
+
+  h5 {
+    @apply text-[20px] xl:text-2xl font-semibold text-gray-900 dark:text-white mb-2;
+  }
+
+  h6 {
+    @apply text-base xl:text-lg font-semibold text-gray-900 dark:text-white mb-2;
+  }
+
+  /* Paragraph and text styles */
+  p {
+    @apply text-base text-gray-700 dark:text-gray-300 mb-4;
+  }
+
+  /* Link styles */
+  a {
+    @apply text-blue-600 dark:text-blue-400 hover:underline transition;
+  }
+
+  a:visited {
+    @apply text-purple-600 dark:text-purple-400;
+  }
+
+  /* List styles */
+  ul,
+  ol {
+    @apply ml-6 mb-4;
+  }
+
+  li {
+    @apply mb-2 text-gray-700 dark:text-gray-300;
+  }
+
+  /* Code and pre styles */
+  code {
+    @apply font-mono text-sm bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-red-600 dark:text-red-400;
+  }
+
+  pre {
+    @apply bg-gray-100 dark:bg-gray-900 p-4 rounded-lg overflow-x-auto mb-4;
+    border-left: 4px solid rgb(var(--color-primary));
+  }
+
+  pre code {
+    @apply bg-transparent px-0 py-0 text-gray-800 dark:text-gray-200;
+  }
+
+  /* Blockquote styles */
+  blockquote {
+    @apply border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic text-gray-700 dark:text-gray-300 my-4;
+  }
+
+  /* Emphasis styles */
+  em,
+  i {
+    @apply italic;
+  }
+
+  strong,
+  b {
+    @apply font-semibold;
+  }
+
+  /* Horizontal rule */
+  hr {
+    @apply border-t border-gray-200 dark:border-gray-700 my-6;
+  }
+
+  /* Small text */
+  small {
+    @apply text-sm text-gray-600 dark:text-gray-400;
+  }
+
+  /* Subscript and superscript */
+  sub,
+  sup {
+    @apply text-xs;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-blue-200 dark:bg-blue-800 text-gray-900 dark:text-white;
+  }
+}
+
+@layer utilities {
+  .header_nav {
+    @apply text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white px-3 py-2 text-sm font-medium;
+  }
+  .header_mob_nav {
+    @apply text-gray-700 hover:text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium;
+  }
+}
+
+.ts-label {
+  @apply w-15 h-7.5 rounded-2xl bg-black dark:bg-white relative z-10 transition-all duration-300;
+}
+
+.ts-input {
+  @apply appearance-none w-0 h-0;
+}
+
+.ts-span {
+  @apply w-3.5 h-3.5 dark:w-5 dark:h-5 border-2 border-black dark:border-0 dark:border-transparent rounded-full bg-yellow-500 dark:bg-black absolute left-[7.5px] top-2/4 -translate-y-1/2 dark:left-8.75 inline-block transition-all duration-300;
+}
+
+.ts-label:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg) scale(1);
+  transform-origin: center;
+  border-radius: 100%;
+  background-image: repeating-conic-gradient(
+    var(--color-yellow-500) 0deg 10deg,
+    #000 10deg 40deg
+  );
+  transition: all 0.5s ease-in-out 0.2s, rotate 2s ease 0.5s;
+  animation: rotateSun 2.5s linear;
+}
+
+.dark .ts-label:before {
+  transform: translateY(-50%) rotate(90deg) scale(0);
+  transition: all 0.1s ease-in-out;
+  animation: none;
+}
+
+.ts-span:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  display: inline-block;
+  background-color: white;
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  transition: width 0.3s ease-in 100ms;
+}
+
+.dark .ts-span:before {
+  width: 14px;
+  height: 14px;
+}
+
+@keyframes rotateSun {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+.btn__primary {
+  @apply px-4 py-2 text-base appearance-none cursor-pointer inline-block font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition;
+}
+
+.btn__secondary {
+  @apply px-4 py-2 text-base appearance-none cursor-pointer inline-block font-medium text-gray-700 hover:text-gray-900 dark:text-blue-100 dark:hover:text-white transition;
+}
+
+.btn__link {
+  @apply text-blue-600 dark:text-blue-400 hover:underline transition;
+}

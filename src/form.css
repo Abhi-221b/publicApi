@@ -1,0 +1,93 @@
+@reference "./index.css";
+
+@layer components {
+  /* Form wrapper */
+  .form {
+    @apply space-y-6;
+  }
+
+  /* Form group */
+  .form-group {
+    @apply flex flex-col gap-2;
+  }
+
+  /* Label */
+  .form-label {
+    @apply text-sm font-medium text-gray-700 dark:text-gray-300;
+  }
+
+  /* Required star */
+  .form-label.required::after {
+    content: ' *';
+    @apply text-red-500;
+  }
+
+  /* Input, textarea, select */
+  .form-input,
+  .form-textarea,
+  .form-select {
+    @apply w-full rounded-lg border border-gray-300 dark:border-gray-700 
+           bg-white dark:bg-gray-900 
+           px-4 py-2.5 text-sm 
+           text-gray-900 dark:text-gray-100 
+           placeholder-gray-400 dark:placeholder-gray-500
+           focus:outline-none focus:ring-2 
+           focus:ring-blue-600 dark:focus:ring-blue-500 
+           focus:border-transparent
+           transition duration-200;
+  }
+
+  /* Textarea specific */
+  .form-textarea {
+    @apply min-h-[120px] resize-y;
+  }
+
+  /* Disabled state */
+  .form-input:disabled,
+  .form-textarea:disabled,
+  .form-select:disabled {
+    @apply bg-gray-100 dark:bg-gray-800 
+           text-gray-400 dark:text-gray-500 
+           cursor-not-allowed;
+  }
+
+  /* Error state */
+  .form-input.error,
+  .form-textarea.error,
+  .form-select.error {
+    @apply border-red-500 focus:ring-red-500;
+  }
+
+  /* Error message */
+  .form-error {
+    @apply text-sm text-red-500;
+  }
+
+  /* Help text */
+  .form-hint {
+    @apply text-xs text-gray-500 dark:text-gray-400;
+  }
+
+  /* Button base */
+  .form-button {
+    @apply inline-flex items-center justify-center
+           rounded-lg px-5 py-2.5
+           text-sm font-medium
+           bg-blue-600 text-white
+           hover:bg-blue-700
+           focus:outline-none focus:ring-2 focus:ring-blue-500
+           transition duration-200;
+  }
+
+  /* Secondary button */
+  .form-button-secondary {
+    @apply bg-gray-200 dark:bg-gray-800
+           text-gray-900 dark:text-gray-100
+           hover:bg-gray-300 dark:hover:bg-gray-700;
+  }
+
+  /* Full width button option */
+  .form-button-block {
+    @apply w-full;
+  }
+}

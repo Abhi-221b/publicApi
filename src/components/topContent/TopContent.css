@@ -1,0 +1,21 @@
+@reference "../../index.css";
+
+.top_content__title {
+  margin-bottom: 28px;
+}
+
+.top_content__cta {
+  margin-top: 24px;
+}
+
+.top_content_inner.two-column {
+  @apply xl:flex gap-6 justify-between;
+}
+
+.top_content_inner.two-column .top_content__title {
+  @apply w-full xl:w-[65%];
+}
+
+.top_content_inner.two-column .top_content__contentwrap {
+  @apply w-full xl:w-[35%];
+}
