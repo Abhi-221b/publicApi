@@ -210,11 +210,22 @@
 .btn__primary {
   @apply px-4 py-2 text-base appearance-none cursor-pointer inline-block font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition;
 }
-
 .btn__secondary {
+  @apply px-5 py-3 text-base appearance-none cursor-pointer inline-block font-medium bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition;
+}
+.btn__tertiary {
   @apply px-4 py-2 text-base appearance-none cursor-pointer inline-block font-medium text-gray-700 hover:text-gray-900 dark:text-blue-100 dark:hover:text-white transition;
 }
 
 .btn__link {
   @apply text-blue-600 dark:text-blue-400 hover:underline transition;
+}
+
+.btn__primary:disabled {
+  background-color: rgba(19, 1, 1, 0.3);
+  cursor: not-allowed;
+}
+.dark .btn__primary:disabled {
+  background-color: rgba(239, 239, 239, 0.3);
+  cursor: not-allowed;
 }

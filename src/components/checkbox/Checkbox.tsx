@@ -2,7 +2,7 @@ import { forwardRef, useId } from "react";
 
 export type CheckboxProps = React.InputHTMLAttributes<HTMLInputElement> & {
     checkedValue: boolean,
-    className: string,
+    className?: string,
     label: string,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }

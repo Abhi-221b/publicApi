@@ -91,3 +91,40 @@
     @apply w-full;
   }
 }
+
+.cst-label {
+  @apply relative z-10 leading-1.5 inline-block;
+}
+
+.cst-label_text {
+  @apply ml-18 mb-4 inline-block leading-none;
+}
+
+.cst-checkbox {
+  @apply appearance-none w-0 h-0 bg-transparent;
+}
+
+.cst-checkbox:before {
+  content: '';
+  transition: all 0.2s ease-in 0.2s;
+  top: 0;
+  left: 0;
+  @apply relative inline-block w-[48px] h-[24px] bg-[#f1f1f1] border border-blue-600 rounded-full align-middle cursor-pointer;
+}
+
+.cst-checkbox:checked:before {
+  @apply bg-[#9e9e9e];
+}
+
+.cst-checkbox:after {
+  content: '';
+  transition: all 0.5s ease;
+  top: 2px;
+  left: 2px;
+  @apply absolute inline-block rounded-full w-[20px] h-[20px] bg-blue-600 border-none align-middle cursor-pointer;
+}
+
+.cst-checkbox:checked:after {
+  left: 26px;
+  @apply bg-blue-500;
+}

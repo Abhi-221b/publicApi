@@ -55,7 +55,7 @@ export default function Header() {
 
                     {/* CTA Button - Desktop */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <button className="btn__secondary">
+                        <button className="btn__tertiary">
                             Sign In
                         </button>
                         <button className="btn__primary">

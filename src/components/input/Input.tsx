@@ -2,7 +2,7 @@ import { forwardRef, useId } from "react";
 
 export type InputProps = {
     label?: string;
-    type: string;
+    type?: string;
     className?: string;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 

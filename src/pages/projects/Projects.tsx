@@ -1,10 +1,9 @@
-import { HeroBanner, Counter } from "../../components";
+import { Counter } from "../../components";
 
 export default function Projects() {
 
     return (
         <>
-            <HeroBanner />
             <Counter />
         </>
     );

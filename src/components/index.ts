@@ -5,6 +5,8 @@ import Counter from "./counter/Counter";
 import HeroBanner from "./banners/HeroBanner";
 import Container from "./container/Container";
 import TopContent from "./topContent/TopContent";
+import Checkbox from "./checkbox/Checkbox";
+import Input from "./input/Input";
 
 export {
     Header,
@@ -13,5 +15,7 @@ export {
     Counter,
     HeroBanner,
     Container,
-    TopContent
+    TopContent,
+    Checkbox,
+    Input
 } 
