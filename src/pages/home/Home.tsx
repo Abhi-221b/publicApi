@@ -1,4 +1,4 @@
-import { HeroBanner } from "../../components";
+import { HeroBanner, JsonPlaceholderPosts } from "../../components";
 
 export default function Home() {
 
@@ -25,6 +25,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <JsonPlaceholderPosts />
     </>
   );
 }
