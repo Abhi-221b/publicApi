@@ -8,6 +8,7 @@ import TopContent from "./topContent/TopContent";
 import Checkbox from "./checkbox/Checkbox";
 import Input from "./input/Input";
 import JsonPlaceholderPosts from "./jsonPlaceholder/JsonPlaceholderPosts";
+import Jokes from "./jokes/Jokes";
 
 export {
     Header,
@@ -19,5 +20,6 @@ export {
     TopContent,
     Checkbox,
     Input,
-    JsonPlaceholderPosts
+    JsonPlaceholderPosts,
+    Jokes
 } 

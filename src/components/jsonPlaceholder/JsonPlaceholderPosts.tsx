@@ -7,7 +7,7 @@ type Post = {
   body: string;
 };
 
-const POSTS_URL = "https://jsonplaceholder.typicode.com/posts?_limit=6";
+const POSTS_URL = "/.netlify/functions/jsonplaceholder";
 
 export default function JsonPlaceholderPosts() {
   const { data: posts, loading, error } = useFetch<Post[]>(POSTS_URL);
