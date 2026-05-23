@@ -1,7 +1,7 @@
 import Container from "../container/Container";
 import Button, { type ButtonProps } from "../button/Button";
 import type { CSSProperties, JSX } from "react";
-import "./topContent.css"
+import '../../css/topContent.css'
 
 
 export type TopContentProps = {
