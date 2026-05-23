@@ -56,22 +56,34 @@ export default function Footer () {
             <h4 className='text-white font-semibold mb-4'>Company</h4>
             <ul className='space-y-2'>
               <li>
-                <a href='#' className='text-sm hover:text-white transition'>
+                <a
+                  href='#'
+                  className='text-sm text-[#ffffffb2] hover:text-white transition'
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href='#' className='text-sm hover:text-white transition'>
+                <a
+                  href='#'
+                  className='text-sm text-[#ffffffb2] hover:text-white transition'
+                >
                   Blog
                 </a>
               </li>
               <li>
-                <a href='#' className='text-sm hover:text-white transition'>
+                <a
+                  href='#'
+                  className='text-sm text-[#ffffffb2] hover:text-white transition'
+                >
                   Careers
                 </a>
               </li>
               <li>
-                <a href='#' className='text-sm hover:text-white transition'>
+                <a
+                  href='#'
+                  className='text-sm text-[#ffffffb2] hover:text-white transition'
+                >
                   Contact
                 </a>
               </li>
@@ -83,22 +95,34 @@ export default function Footer () {
             <h4 className='text-white font-semibold mb-4'>Resources</h4>
             <ul className='space-y-2'>
               <li>
-                <a href='#' className='text-sm hover:text-white transition'>
+                <a
+                  href='#'
+                  className='text-sm text-[#ffffffb2] hover:text-white transition'
+                >
                   Documentation
                 </a>
               </li>
               <li>
-                <a href='#' className='text-sm hover:text-white transition'>
+                <a
+                  href='#'
+                  className='text-sm text-[#ffffffb2] hover:text-white transition'
+                >
                   Help Center
                 </a>
               </li>
               <li>
-                <a href='#' className='text-sm hover:text-white transition'>
+                <a
+                  href='#'
+                  className='text-sm text-[#ffffffb2] hover:text-white transition'
+                >
                   API Docs
                 </a>
               </li>
               <li>
-                <a href='#' className='text-sm hover:text-white transition'>
+                <a
+                  href='#'
+                  className='text-sm text-[#ffffffb2] hover:text-white transition'
+                >
                   Community
                 </a>
               </li>
