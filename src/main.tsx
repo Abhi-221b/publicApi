@@ -17,6 +17,7 @@ import '@fontsource/merriweather/700.css'
 import '@fontsource/fira-code/400.css'
 import '@fontsource/fira-code/500.css'
 import '@fontsource/fira-code/700.css'
+import { HelmetProvider } from 'react-helmet-async'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </StrictMode>
 )
