@@ -8,7 +8,7 @@ export default function HeroBanner () {
     <div className='bg-linear-to-r from-blue-500 to-purple-600 py-20'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='text-center'>
-          <h1 className='text-white mb-4'>
+          <h1 className='text-white mb-4 leading-2.5'>
             I Tried Building a Palace and Somehow Built a Hut
           </h1>
           <p className='text-xl text-blue-100 mb-8'>
