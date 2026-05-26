@@ -17,7 +17,11 @@ import '@fontsource/merriweather/700.css'
 import '@fontsource/fira-code/400.css'
 import '@fontsource/fira-code/500.css'
 import '@fontsource/fira-code/700.css'
+import ReactGA from 'react-ga4'
 import { HelmetProvider } from 'react-helmet-async'
+
+// Initialize Google Analytics
+ReactGA.initialize('G-XMG1Z14KGT')
 
 const router = createBrowserRouter([
   {
