@@ -1,6 +1,30 @@
+import { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 export default function Contact () {
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = '//js-na2.hsforms.net/forms/embed/v2.js'
+    script.async = true
+    document.body.appendChild(script)
+
+    script.onload = () => {
+      const hbspt = (window as any).hbspt
+      if (hbspt?.forms?.create) {
+        hbspt.forms.create({
+          portalId: '48884907',
+          formId: '9bbfd0b7-f431-4c69-bfc4-e00e6fafa904',
+          region: 'na2',
+          target: '#hubspotForm'
+        })
+      }
+    }
+
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
+
   return (
     <>
       <Helmet>
@@ -22,6 +46,13 @@ export default function Contact () {
           your questions.
         </p>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+          <div className='bg-gray-50 dark:bg-gray-900 rounded-lg p-6 md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3 md:self-center'>
+            <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4'>
+              Contact Form
+            </h2>
+            <div id='hubspotForm' />
+          </div>
+
           <div className='bg-gray-50 dark:bg-gray-900 rounded-lg p-6'>
             <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4'>
               Get in Touch
@@ -45,6 +76,7 @@ export default function Contact () {
               (EST). We strive to respond to all inquiries within 24 hours.
             </p>
           </div>
+
           <div className='bg-gray-50 dark:bg-gray-900 rounded-lg p-6'>
             <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4'>
               Visit Us
